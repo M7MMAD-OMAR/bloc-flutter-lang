@@ -1,3 +1,4 @@
 {
-  "hello_msg": "Hello there !"
+  "hello_msg": "Hello there !",
+  "text": "This text will not be translated."
 }

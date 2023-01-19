@@ -20,8 +20,8 @@ class HomePage extends StatelessWidget {
                 style: const TextStyle(fontSize: 25),
                 textAlign: TextAlign.center,
               ),
-              const Text(
-                'This text will not be translated.',
+              Text(
+                "text".tr(context),
                 style: TextStyle(fontSize: 25),
                 textAlign: TextAlign.center,
               ),
