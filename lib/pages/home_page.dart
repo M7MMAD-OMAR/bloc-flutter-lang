@@ -1,5 +1,6 @@
 import 'package:bloc_project/app_localizations.dart';
 import 'package:flutter/material.dart';
+import 'settings_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -7,7 +8,15 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("home".tr(context)),
+        actions: [
+          IconButton(
+              onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (ctx) => const SettingsPage())),
+              icon: const Icon(Icons.settings))
+        ],
+      ),
       drawer: const Drawer(),
       body: Center(
         child: Padding(
@@ -21,7 +30,12 @@ class HomePage extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               Text(
-                "text".tr(context),
+                "test".tr(context),
+                style: const TextStyle(fontSize: 25),
+                textAlign: TextAlign.center,
+              ),
+              const Text(
+                'This text will not be translated.',
                 style: TextStyle(fontSize: 25),
                 textAlign: TextAlign.center,
               ),
